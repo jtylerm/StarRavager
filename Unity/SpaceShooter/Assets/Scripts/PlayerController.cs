@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour {
 
 	public float missileSpeed;
 
+	public int playerHealth = 4;
+	public int ammoCount = 30;
+
 	public GameObject missileTemplate;
 
 
@@ -23,6 +26,10 @@ public class PlayerController : MonoBehaviour {
 			FireMissile();
 		}
 		#endif
+
+		if(playerHealth < 1) {
+			GameManager.defaultGM.GameOver(true);
+		}
 	}
 
 	void Move(float horizontalDirection) {
@@ -42,10 +49,21 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void FireMissile() {
-		//use player's position plus some extra space in front of his ship to Instantiate missiles
-		Vector3 startPosition = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
-		GameObject missile = Instantiate(missileTemplate, startPosition, Quaternion.identity);
+		if(ammoCount > 0) {
+			//use player's position to Instantiate missiles
+			Vector3 startPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+			GameObject missile = Instantiate(missileTemplate, startPosition, Quaternion.identity);
 
-		missile.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, missileSpeed));
+			missile.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, missileSpeed));
+		}
+	}
+
+	public void PickedUpAmmo() {
+		ammoCount += 15;
+	}
+
+	public void PlayerWasHit() {
+		playerHealth--;
+		GameManager.defaultGM.UpdateHealthUI();
 	}
 }

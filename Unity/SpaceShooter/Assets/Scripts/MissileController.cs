@@ -6,6 +6,12 @@ public class MissileController : MonoBehaviour {
 
 	public GameObject explosionTemplate;
 
+	public PlayerController player;
+
+
+	void Awake() {
+		player = GameObject.Find("Player").gameObject.GetComponent<PlayerController>();
+	}
 
 	//destroy player missiles that go off screen
 	void OnTriggerEnter2D(Collider2D other) {
@@ -32,16 +38,18 @@ public class MissileController : MonoBehaviour {
 		}
 
 		if (coll.gameObject.tag == "Player") {
-			//create explosion
-			GameObject explosion = Instantiate(explosionTemplate, coll.transform.position, Quaternion.identity);
-
-			//destroy player and explosion
 			Destroy(this.gameObject);
-			Destroy(coll.gameObject);
-			Destroy(explosion, .33f);
 
-			//end the round
-			GameManager.defaultGM.isGameOver = true;
+			player.PlayerWasHit();
+
+			if(player.playerHealth < 1) {
+				//create explosion
+				GameObject explosion = Instantiate(explosionTemplate, coll.transform.position, Quaternion.identity);
+
+				//destroy player and explosion
+				Destroy(coll.gameObject);
+				Destroy(explosion, .33f);
+			}
 		}
 	}
 }
