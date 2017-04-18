@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5d1b7a7581d944a10998d5737240b0ff
-timeCreated: 1488151556
+timeCreated: 1492125514
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -98,10 +98,10 @@ TextureImporter:
       name: EnemyShips_0
       rect:
         serializedVersion: 2
-        x: 91
-        y: 688
-        width: 301
-        height: 249
+        x: 98
+        y: 909
+        width: 447
+        height: 370
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,10 +111,10 @@ TextureImporter:
       name: EnemyShips_1
       rect:
         serializedVersion: 2
-        x: 478
-        y: 689
-        width: 347
-        height: 247
+        x: 796
+        y: 934
+        width: 481
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,10 +124,10 @@ TextureImporter:
       name: EnemyShips_2
       rect:
         serializedVersion: 2
-        x: 873
-        y: 691
-        width: 321
-        height: 243
+        x: 1519
+        y: 905
+        width: 439
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: EnemyShips_3
       rect:
         serializedVersion: 2
-        x: 1300
-        y: 700
-        width: 305
-        height: 225
+        x: 96
+        y: 159
+        width: 474
+        height: 437
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: EnemyShips_4
       rect:
         serializedVersion: 2
-        x: 1699
-        y: 670
-        width: 301
-        height: 285
+        x: 797
+        y: 182
+        width: 497
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,49 +163,10 @@ TextureImporter:
       name: EnemyShips_5
       rect:
         serializedVersion: 2
-        x: 51
-        y: 163
-        width: 382
-        height: 328
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: EnemyShips_6
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 199
-        width: 410
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: EnemyShips_7
-      rect:
-        serializedVersion: 2
-        x: 993
-        y: 104
-        width: 281
-        height: 446
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: EnemyShips_8
-      rect:
-        serializedVersion: 2
-        x: 1467
-        y: 69
-        width: 558
-        height: 492
+        x: 1512
+        y: 70
+        width: 439
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
